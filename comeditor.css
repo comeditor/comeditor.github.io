@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding:0;
+    outline:none;
+    border:none;
+    box-sizing:border-box;
+    line-height:1;
+}
+
+html{
+    width:100%;
+    height:100%;
+    font-size:16px;
+}
+
+body{
+    width:100%;
+    height:100%;
+    font-size:1rem;
+}
+
+#comeditor{
+    width:100%;
+    height:50%;
+    padding:1rem;
+    line-height:1.5;
+}
+
+#comeditor table{
+    width:100%;
+    table-layout: fixed;
+    border-spacing:0 1rem;
+}
+
+#comeditor table th,
+#comeditor table td{
+    text-align:left;
+    vertical-align:top;
+}
+
+#comeditor table tbody th{
+}
+
+#comeditor table tbody td{
+    width:100%;
+}
+
+
+#comeditor table thead{
+}
+
+#comeditor table tbody{
+}
+
+#comeditor table p{
+    margin-bottom:0.5em;
+}
+
+#comeditor table th.hidden{
+    display:none;
+}
