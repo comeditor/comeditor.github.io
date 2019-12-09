@@ -10,9 +10,7 @@
     var THEADS_TITLE = 'タイトル';
     var THEADS_CHARACTER = '登場人物';
     var THEADS_DESCRIPTION = '概要';
-    var THEADS_CATEGORY = 'カテゴリー';
-    var THEADS_TAG = 'タグ';
-    var THEADS = [THEADS_TITLE,THEADS_CHARACTER,THEADS_DESCRIPTION,THEADS_CATEGORY,THEADS_TAG];
+    var THEADS = [THEADS_TITLE,THEADS_CHARACTER,THEADS_DESCRIPTION];
 
     var is_chrome;
     var sel;
