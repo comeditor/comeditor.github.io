@@ -2,11 +2,49 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="Comeditor（コメディター）は、お笑い芸人専用の漫才・コント台本エディタです。">
 <title>Comeditor</title>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link rel="stylesheet" href="comeditor.css">
 </head>
 <body>
-<div id="comeditor"></div>
+<header>
+    <h1><span>漫才・コント台本エディタ</span>Comeditor</h1>
+    <ul id="menu">
+        <!-- <li><a href="https://twitter.com/wwwcomeditornet" target="_blank"><i class="fab fa-twitter-square"></i></a></li> -->
+        <li><a href="https://github.com/comeditor/comeditor.github.io" target="_blank"><i class="fab fa-github-square"></i></a></li>
+        <!-- <li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li> -->
+    </ul>
+</header>
+<div id="main">
+    <ul id="file_editor" class="sidebar">
+        <li data-file="1">台本1</li>
+        <li data-file="2">台本2</li>
+        <li data-file="3">台本3</li>
+        <li data-file="4">台本4</li>
+        <li data-file="5">台本5</li>
+        <li data-file="6">台本6</li>
+        <li data-file="7">台本7</li>
+        <li data-file="8">台本8</li>
+        <li data-file="9">台本9</li>
+        <li data-file="10">台本10</li>
+    </ul>
+    <div id="comeditor">
+        <h2 id="title_editor" class="comeditor__title" contenteditable=true>台本１</h2>
+        <ul id="character_editor">
+            <li><label><input id="character-A" type="checkbox" name="character" value="A" checked/><span class="character-btn">A</span></label></li>
+            <li><label><input id="character-B" type="checkbox" name="character" value="B" checked/><span class="character-btn">B</span></label></li>
+            <li><label><input id="character-C" type="checkbox" name="character" value="C" checked/><span class="character-btn">C</span></label></li>
+            <li><label><input id="character-D" type="checkbox" name="character" value="D" checked/><span class="character-btn">D</span></label></li>
+            <li><label><input id="character-E" type="checkbox" name="character" value="E" checked/><span class="character-btn">E</span></label></li>
+        </ul>
+        <table>
+            <thead><tr><th></th><td></td></tr></thead>
+            <tbody id="script_editor"></tbody>
+        </table>
+        <div id="savebtn">保存する</div>
+    </div>
+</div>
 <script src="comeditor.js"></script>
 </body>
 </html>

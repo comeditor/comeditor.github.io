@@ -10,7 +10,7 @@
 html{
     width:100%;
     height:100%;
-    font-size:16px;
+    font-size:14px;
 }
 
 body{
@@ -19,37 +19,156 @@ body{
     font-size:1rem;
 }
 
-#comeditor{
+ul{
+    list-style-type:none;
+}
+
+a,a:visited,a:hover,a:active{
+    color:inherit;
+    font-size:inherit;
+    text-decoration:none;
+}
+
+header{
     width:100%;
-    height:50%;
+    height:80px;
+    background-color:#b3dd88;
+    border-bottom:1px solid #FFF;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#FFF;
+    padding:0 1rem;
+}
+
+header h1{
+    font-size:2rem;
+    letter-spacing:2px;
+}
+
+header h1 span{
+    display:block;
+    font-size:11px;
+    margin-bottom:4px;
+    text-align:center;
+}
+
+#menu{
+    font-size:1.8rem;
+}
+
+#menu li{
+    display:inline-block;
+}
+
+#menu li + li{
+    margin-left:5px;
+}
+
+#main{
+    display:flex;
+    flex-wrap:wrap;
+    height:calc(100% - 80px);
+}
+
+.sidebar{
+    width:250px;
+    flex-shrink:0;
+    background-color:#e5f6d3;
+}
+
+#file_editor > li{
+    border-bottom:1px solid #b3dd88;
+    height:40px;
+    line-height:40px;
+    padding:0 1rem;
+    color:#3e901f;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+#file_editor > li.current_file{
+    background-color:#b3dd88;
+    color:#FFF;
+}
+
+#comeditor{
+    width:calc(100% - 250px);
+    height:100%;
     padding:1rem;
     line-height:1.5;
+    overflow:scroll;
+    position:relative;
+}
+
+.comeditor__title{
+    color:#3e901f;
+    margin-bottom:1em;
+}
+
+#character_editor{
+}
+
+#character_editor li{
+    display:inline-block;
+    margin-right:.5em;
+    color:inherit;
+    font-size:0.9rem;
+}
+
+#character_editor li label{
+    display:block;
+    background-color: #FFF;
+    width:50px;
+    height:25px;
+    cursor:pointer;
+    position:relative;
+}
+
+#character_editor li input{
+    display:none;
+}
+
+#character_editor li span{
+    opacity:0.2;
+    color:#FFF;
+    font-weight:bold;
+    background-color:#b3dd88;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    line-height:25px;
+    text-align:center;
+}
+
+#character_editor li input:checked + span{
+    opacity:1;
 }
 
 #comeditor table{
-    width:100%;
+    width: 100%;
     table-layout: fixed;
     border-spacing:0 1rem;
+    word-wrap: break-word;
 }
 
 #comeditor table th,
 #comeditor table td{
     text-align:left;
     vertical-align:top;
+    color:#666;
 }
 
-#comeditor table tbody th{
+#comeditor table th{
+    width:50px;
 }
 
-#comeditor table tbody td{
+#comeditor table td{
     width:100%;
-}
-
-
-#comeditor table thead{
-}
-
-#comeditor table tbody{
 }
 
 #comeditor table p{
@@ -58,4 +177,24 @@ body{
 
 #comeditor table th.hidden{
     display:none;
+}
+
+#savebtn{
+    opacity:.5;
+    position:fixed;
+    right:2rem;
+    bottom:2rem;
+    background-color:#b3dd88;
+    color:#FFF;
+    font-weight:bold;
+    padding:.5em 1rem;
+    border-radius:2px;
+    width:100px;
+    text-align:center;
+    cursor:pointer;
+    transition:opacity .3s;
+}
+
+#savebtn:hover{
+    opacity:1;
 }
